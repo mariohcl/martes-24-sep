@@ -9,7 +9,7 @@
     <% if logged? %>
 
     <li class="nav-item">
-      <%= link_to "Salir", session_path(current_user), method: :delete %>
+      <%= link_to "Salir", session_path(current_user), method: :delete, class: 'btn btn-danger' %>
     </li>
 
     <% else %>
