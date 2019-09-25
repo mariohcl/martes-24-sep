@@ -1,0 +1,37 @@
+<div class="container col-md-4 wrap">
+
+  <div class="contenido">
+
+    <h3>
+      <% if logged? %>
+        <span><%= current_user.name %></span> Te haz registrado
+      <% end %>
+    </h3>
+
+    <h1>Bielvenidos</h1>
+    <h2>Formulario de login</h2>
+    <p>El formulario de login de todos los mas pulentos de los pulentos que tratan de entender Rails</p>
+
+    <nav>
+      <ul>
+        <% if logged? %>
+        <%= link_to "Salir", session_path(current_user), method: :delete %>
+        <% else %>
+        <li>
+          <%= link_to "Registrarse", users_sign_up_path, class: 'btn btn-primary' %>
+        </li>
+        <li>
+          <%= link_to "Iniciar sesión", users_sign_in_path, class: 'btn btn-success' %>
+        </li>
+        <% end %>
+
+      </ul>
+
+
+
+    </nav>
+
+
+  </div>
+
+</div>

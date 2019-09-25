@@ -1,0 +1,84 @@
+html{
+  height: 100%;
+}
+.main-wrap{
+  background-color: #f1f1f1;
+  height: 100%;
+
+  .wrap{
+    font-family: 'Lato', sans-serif;
+    background-color: white;
+    background-image: url('https://cdn.dribbble.com/users/3281732/screenshots/7081818/media/c312cd81c9166d590d21060ba1dfbd49.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding: 2%;
+    box-shadow: 1px 5px 10px #d0d0d0;
+    border-radius: 10px;
+    border: 1px solid #ececec;
+    text-align: center;
+    height: 80%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+
+    .contenido{
+      margin: 5% 10% 0;
+
+      h1{
+        color: #007bff;
+        font-weight: bold;
+        font-size: 2.5em;
+      }
+      h2{
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1.5em;
+      }
+      h3{
+        font-weight: bold;;
+        font-size: 0.9em;
+        span{
+          color: orange
+        }
+      }
+      p{
+        font-size: 1em;
+
+      }
+
+      nav{
+        ul{
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+
+          li{
+            list-style: none;
+            &:last-child{
+              margin-left: 5px;
+            }
+            a{
+
+            }
+          }
+        }
+      }
+
+    }
+    .form-int{
+
+      .field{
+        margin-top: 10px;
+      }
+
+
+    }
+
+  }
+  .bg-inter{
+    background-image: url('https://cdn.dribbble.com/users/3281732/screenshots/6917895/samji_illustrator_2x.jpg');
+  }
+
+}

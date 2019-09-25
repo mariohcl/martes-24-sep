@@ -1,0 +1,49 @@
+<div class="container col-md-4 wrap bg-inter">
+
+  <div class="contenido form-int">
+
+    <h1>Regístrate</h1>
+
+    <% if logged? %>
+      Bienvenido <%= current_user.name %>
+      <%= link_to "Salir", session_path(current_user), method: :delete %>
+    <% end %>
+
+    <%= form_with(model: @user) do |form| %>
+
+      <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <h2><% pluralize(@user.errors.count, "Error") %>Lorem ipsum</h2>
+
+          <ul>
+            <% @user.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+
+      <div class="field">
+        <%= form.label :name %>
+        <%= form.text_field :name, id: :user_name, class: 'form-control' %>
+      </div>
+
+      <div class="field">
+        <%= form.label :email %>
+        <%= form.text_field :email, id: :user_email, class: 'form-control' %>
+      </div>
+
+      <div class="field">
+        <%= form.label :password %>
+        <%= form.password_field :password, id: :user_password, class: 'form-control' %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit "Registrarse", class: 'btn btn-primary mt-3'  %>
+      </div>
+
+    <% end %>
+
+  </div>
+
+</div>
